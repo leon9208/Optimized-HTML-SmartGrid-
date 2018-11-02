@@ -1,0 +1,25 @@
+@import "smart-grid";
+
+$reg-font: "gotham-regular", sans-serif
+$bold-font: "gotham-bold", sans-serif
+$black-font: "gotham-black", sans-serif
+$light-font: "gotham-light", sans-serif
+
+$accent: lightblue
+$text: #242424
+
+// Медиазапросы:
+=lg()
+	@media (max-width: 1199.98px)
+		@content
+=md()
+	@media (max-width: 991.98px)
+		@content
+=sm()
+	@media (max-width: 767.98px)
+		@content
+=xs()
+	@media (max-width: 575.98px)
+		@content
+
++reset()

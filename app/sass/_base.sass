@@ -1,0 +1,25 @@
+@import "vars"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	position: relative
+	line-height: 1.4
+	overflow-x: hidden
+	font-family: $reg-font
+	color: $text
+
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+	
