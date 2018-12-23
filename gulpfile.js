@@ -32,6 +32,7 @@ gulp.task('pug', function buildHTML() {
     pretty: true
 	}))
 	.pipe(gulp.dest('app'))
+	.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('sass', ['headersass'], function() {
@@ -51,7 +52,7 @@ gulp.task('headersass', function() {
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer(['last 15 versions']))
 		// .pipe(groupmedia()) // Использовать при отладке, закомментировав cleanCSS
-		.pipe(cleanCSS({level: 2})) 
+		.pipe(cleanCSS({level: 2}))
 		.pipe(gulp.dest('app'))
 		.pipe(browserSync.reload({stream: true}))
 });
@@ -87,7 +88,7 @@ gulp.task('imagemin', function() {
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()]
 		})))
-		.pipe(gulp.dest('dist/img')); 
+		.pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('buildhtml', function() {

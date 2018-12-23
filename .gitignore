@@ -27,6 +27,8 @@ $RECYCLE.BIN/
 *.lnk
 # Node modules
 /node_modules/
+/dist/
+/app/css/
 # Local package JSON
 package-lock.json
 # End of https://www.gitignore.io/api/windows
